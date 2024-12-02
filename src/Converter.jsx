@@ -1,4 +1,4 @@
-const Converter = ({Num,setNum,From_Unit,setFrom_Unit,To_Unit,setToUnit}) => {
+const Converter = ({Num,setNum,From_Unit,setFrom_Unit,To_Unit,setToUnit,convert}) => {
 
     
     return ( 
@@ -9,7 +9,7 @@ const Converter = ({Num,setNum,From_Unit,setFrom_Unit,To_Unit,setToUnit}) => {
             <select name="fromUnit" id="fromUnit" value={From_Unit} onChange={(e)=>setFrom_Unit(e.target.value)}>
                 <option value=''>From Unit</option>
                 <option value='Fahrenite'>Fahrenite</option>
-                <option value='Celsues'>Celsues</option>
+                <option value='Celseus'>Celsues</option>
                 <option value='Kelvin'>Kelvin</option>
             </select>
             <select name="toUnit" id="toUnit" value={To_Unit} onChange={(e)=>setToUnit(e.target.value)}>
@@ -18,7 +18,6 @@ const Converter = ({Num,setNum,From_Unit,setFrom_Unit,To_Unit,setToUnit}) => {
                 <option value='Celseus'>Celsues</option>
                 <option value='Kelvin'>Kelvin</option>
             </select>
-            <button>Convert</button>
         </div>
      );
 }
