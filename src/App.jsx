@@ -18,8 +18,8 @@ function App() {
       const handleClick = ()=>{
 
             switch(f_unit){
-              case 'Fahrenite':
-                if(to_unit=='Celseus'){
+              case 'Fahrenhiet':
+                if(to_unit=='Celsius'){
                     let newValue = (Number(num)-32)*(5/9);
 
                   setAnswer(newValue);
@@ -29,8 +29,8 @@ function App() {
                     setAnswer(newValue);
                 }
                 break;
-              case 'Celseus':
-                if(to_unit=='Fahrenite'){
+              case 'Celsius':
+                if(to_unit=='Fahrenhiet'){
 
                   let newValue = 32+(9/5)*Number(num);
 
@@ -44,13 +44,13 @@ function App() {
                 }
                 break;
                 case 'Kelvin':
-                if(to_unit=='Fahrenite'){
+                if(to_unit=='Fahrenhiet'){
 
                   let newValue = (Number(num)-273.15)*1.8+32;
 
                   setAnswer(newValue);
 
-                }else if(to_unit=='Celseus'){
+                }else if(to_unit=='Celsius'){
                   
                   let newValue = Number(num) - 273.15;
 
@@ -64,7 +64,7 @@ function App() {
       }
       useEffect(()=>{
 
-        if(f_unit==''||to_unit=='' || num==''){
+        if(f_unit==''||to_unit=='' || f_unit==to_unit|| num==''){
 
           setAnswer(num);
           
