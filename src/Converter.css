@@ -1,0 +1,22 @@
+.converter-cont{
+    border: 5px solid black;
+    margin:auto;
+    width: 40%;
+    border-radius: 15px;
+    padding: 30px;
+    height: 250px;
+}
+p{
+    font-size: 1.3em;
+}
+input[type='number'],select{
+
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 15px;
+}
+select{
+    width: 30%;
+}

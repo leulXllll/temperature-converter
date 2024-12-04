@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Converter from './Converter'
 import './App.css'
-
+import './Converter.css'
 function App() {
 
     const [f_unit,setFunit] = useState('');
@@ -10,7 +10,7 @@ function App() {
     
     const [num,setNum] = useState('');
     
-    const [btn_cont,setButtoncont] = useState(false);
+    const [answerBool,setAnswerBool] = useState(false);
 
     const [answer,setAnswer] = useState(null);
     
@@ -64,25 +64,36 @@ function App() {
       }
       useEffect(()=>{
 
-        if(f_unit==to_unit){
-          setButtoncont(true);
+        if(f_unit==''||to_unit==''){
+
+          setAnswer(num);
+          
+          setAnswerBool(false);
+          
         }else{
-          setButtoncont(false);
+          setAnswerBool(true)
+
+          setAnswer(true);
+
           handleClick();
         }
-      },[f_unit,to_unit]);
+      },[f_unit,to_unit,num]);
+      useEffect(()=>{
+        setAnswerBool(false);
+      },[])
   return (
     <>
+    <div  className="converter-cont">
       <Converter 
-        From_Unit={f_unit} 
-        setFrom_Unit={setFunit}
-        To_Unit={to_unit}
-        setToUnit={setToUnit}
-        Num={num}
-        setNum={setNum}
-        />
-      <button disabled={((f_unit=='')||btn_cont||(to_unit==''))?true:false} onClick={handleClick}>Convert</button>
-       { answer && <p>{num} {f_unit} is {answer} {to_unit}</p>}
+           From_Unit={f_unit} 
+           setFrom_Unit={setFunit}
+           To_Unit={to_unit}
+           setToUnit={setToUnit}
+           Num={num}
+           setNum={setNum}
+           />
+          { answerBool && <p>{num} {f_unit} is {answer} {to_unit}</p>}
+        </div>
     </>
   )
 }
