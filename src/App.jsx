@@ -64,7 +64,7 @@ function App() {
       }
       useEffect(()=>{
 
-        if(f_unit==''||to_unit==''){
+        if(f_unit==''||to_unit=='' || num==''){
 
           setAnswer(num);
           
