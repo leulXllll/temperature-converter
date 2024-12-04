@@ -83,7 +83,7 @@ function App() {
       },[])
   return (
     <>
-    <div  className="converter-cont">
+    <div className="converter-cont">
       <Converter 
            From_Unit={f_unit} 
            setFrom_Unit={setFunit}
@@ -92,7 +92,7 @@ function App() {
            Num={num}
            setNum={setNum}
            />
-          { answerBool && <p>{num} {f_unit} is {answer} {to_unit}</p>}
+          { answerBool && <p className='ans-p'>{num} {f_unit} is {answer} {to_unit}</p>}
         </div>
     </>
   )
