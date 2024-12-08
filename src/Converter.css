@@ -1,10 +1,15 @@
+*{
+    color: white;
+}
+
 .converter-cont{
-    border: 5px solid black;
+    border: 3px solid black;
     margin:auto;
     width: 40%;
     border-radius: 15px;
     padding: 30px;
     height: 250px;
+    background-color: rgb(132, 86, 177) ;
 }
 p{
     font-size: 1.3em;
@@ -25,5 +30,12 @@ select{
     justify-content: space-around;
 }
 .ans-p{
-    color:green
+    color:black
+}
+input,select{
+    background-color: transparent;
+}
+option{
+    background-color: black;
+    border-radius: 10px;
 }
